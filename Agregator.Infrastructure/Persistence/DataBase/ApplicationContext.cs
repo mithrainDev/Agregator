@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Agregator.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Agregator.Infrastructure.Persistence.DataBase;
 
@@ -8,4 +9,6 @@ public sealed class ApplicationContext : DbContext
     {
 
     }
+
+    public DbSet<User> Users { get; set; }
 }

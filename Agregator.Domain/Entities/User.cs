@@ -1,6 +1,6 @@
 ﻿namespace Agregator.Domain.Entities;
 
-public sealed class User
+public sealed class User : BaseEntity
 {
     public string Email { get; set; } = null!;
     public string Name { get; set; } = null!;
