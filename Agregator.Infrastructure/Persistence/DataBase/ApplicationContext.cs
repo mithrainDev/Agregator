@@ -11,4 +11,5 @@ public sealed class ApplicationContext : DbContext
     }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<RideAgregator> RideAgregators { get; set; }
 }

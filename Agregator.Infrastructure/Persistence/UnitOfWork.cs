@@ -8,6 +8,7 @@ public sealed class UnitOfWork : IDisposable
 {
     private readonly ApplicationContext _context;
     private Repository<User> _userRepository = null!;
+    private Repository<RideAgregator> _agregatorRepository = null!;
 
     private bool _disposed = false;
 
@@ -24,6 +25,17 @@ public sealed class UnitOfWork : IDisposable
                 _userRepository = new Repository<User>(_context);
 
             return _userRepository;
+        }
+    }
+
+    public Repository<RideAgregator> AgregatorRepository
+    {
+        get
+        {
+            if (_agregatorRepository == null)
+                _agregatorRepository = new Repository<RideAgregator>(_context);
+
+            return _agregatorRepository;
         }
     }
 
