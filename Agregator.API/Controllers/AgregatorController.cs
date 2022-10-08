@@ -8,9 +8,9 @@ namespace Agregator.API.Controllers;
 [Route("Agregator")]
 public class AgregatorController : BaseController
 {
-    public readonly IAgregatorService _agregatorService;
+    public readonly IAgregatorService2 _agregatorService;
 
-    public AgregatorController(IAgregatorService agregatorService)
+    public AgregatorController(IAgregatorService2 agregatorService)
     {
         _agregatorService = agregatorService;
     }

@@ -1,10 +1,11 @@
-﻿using Agregator.Domain.Entities;
+﻿using Agregator.Application.Common.Interfaces.Percsistence;
+using Agregator.Domain.Entities;
 using Agregator.Infrastructure.Persistence.DataBase;
 using Agregator.Infrastructure.Persistence.GenericRepository;
 
 namespace Agregator.Infrastructure.Persistence;
 
-public sealed class UnitOfWork : IDisposable
+public sealed class UnitOfWork : IDisposable, IUnitOfWork
 {
     private readonly ApplicationContext _context;
     private Repository<User> _userRepository = null!;
@@ -17,7 +18,7 @@ public sealed class UnitOfWork : IDisposable
         _context = context;
     }
 
-    public Repository<User> UserRepository
+    public IRepository<User> UserRepository
     {
         get
         {
@@ -28,7 +29,7 @@ public sealed class UnitOfWork : IDisposable
         }
     }
 
-    public Repository<RideAgregator> AgregatorRepository
+    public IRepository<RideAgregator> AgregatorRepository
     {
         get
         {

@@ -1,7 +1,10 @@
 using Swashbuckle.AspNetCore.Swagger;
 using Agregator.Infrastructure;
+using Agregator.Application;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddApplication();
 
 builder.Services.AddControllers();
 

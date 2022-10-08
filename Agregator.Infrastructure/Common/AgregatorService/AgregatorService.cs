@@ -5,7 +5,7 @@ using Agregator.Infrastructure.Persistence;
 
 namespace Agregator.Infrastructure.Common.AgregatorService;
 
-public sealed class AgregatorService : IAgregatorService
+public sealed class AgregatorService : IAgregatorService2
 {
     private readonly UnitOfWork _unitOfWork;
 

@@ -3,7 +3,7 @@ using Agregator.Domain.Entities;
 
 namespace Agregator.Application.Common.Interfaces.AgregatorService;
 
-public interface IAgregatorService
+public interface IAgregatorService2
 {
     Guid AddAgregator(CreateAgregatorCommand command);
     IEnumerable<RideAgregator> GetAll();

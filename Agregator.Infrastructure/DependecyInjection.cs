@@ -17,7 +17,7 @@ public static class DependecyInjection
         services.AddDbContext<ApplicationContext>(o => o.UseInMemoryDatabase("agregator_db"));
         services.AddScoped<UnitOfWork>();
         services.AddScoped<IUserService, UserService>();
-        services.AddScoped<IAgregatorService, AgregatorService>();
+        services.AddScoped<IAgregatorService2, AgregatorService>();
 
         return services;
     }
